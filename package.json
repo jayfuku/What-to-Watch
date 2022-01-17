@@ -1,0 +1,19 @@
+{
+    "name": "What to Watch",
+    "version": "1.0.0",
+    "description": "node app ",
+    "main": "app.py",
+    "scripts": {
+    "start": "app.py"
+  },
+    "repository": {
+    "type": "git",
+    "url": ""
+  },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+    "url": ""
+  },
+    "homepage": ""
+  }
