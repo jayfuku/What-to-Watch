@@ -11,6 +11,7 @@ flask-sqlalchemy = "*"
 gunicorn = "*"
 requests = "*"
 boto = "*"
+npm = "*"
 
 [dev-packages]
 

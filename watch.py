@@ -4,7 +4,7 @@ import os
 from boto.s3.connection import S3Connection
 
 
-CLIENT_ID = S3Connection(os.environ['CLIENT_ID'])
+CLIENT_ID = os.environ.get("CLIENT_ID")
 
 ops = {
     'Before':operator.le,
