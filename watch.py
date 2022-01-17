@@ -1,7 +1,10 @@
 import requests
 import operator
+import os
+from boto.s3.connection import S3Connection
 
-CLIENT_ID = "64c86150da1760e0ec09e4aecafcead0"
+
+CLIENT_ID = S3Connection(os.environ['CLIENT_ID'])
 
 ops = {
     'Before':operator.le,
