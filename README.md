@@ -34,3 +34,4 @@ After hitting submit, you will be taken to a page showing the anime that is reco
 
 * See the next best recommendation if you're not satisfied with the one shown
 
+* Renaming/accompanying custom domain
