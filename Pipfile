@@ -10,6 +10,7 @@ psycopg2-binary = "*"
 flask-sqlalchemy = "*"
 gunicorn = "*"
 requests = "*"
+boto = "*"
 
 [dev-packages]
 
