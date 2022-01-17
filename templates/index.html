@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>What to Watch?</title>
+</head>
+<body>
+    <div class="container" style="overflow-x: hidden;">
+        <img src="../static/Ice_Climbers_-_Super_Smash_Bros._Melee.png" alt="Ice Climbers" class="center">
+        
+        {% if message == "1" %}
+            <p class='message'>{{ "Username field cannot be blank" | safe}}</p>
+        {% endif %}
+        {% if message == "2" %}
+            <p class='message'>{{ "Please input a valid MAL Username" | safe}}</p>
+        {% endif %}
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <h3>MAL Username</h3>
+                <input type="text" name="username" placeholder="" size="50">
+            </div>
+            
+            <div id="wrapper">
+                <div class="form-groupleft" style="text-align: center">
+                    <h3>Time Preference</h3>
+                    <select name="Time Preference" id="op" size = "1">
+                        <option value="<">Before</option>
+                        <option value=">">After</option>
+                        <option value="=">During</option>
+                        <option value="-">No Preference</option>
+                    </select>
+                </div>
+
+                <div class="form-groupleft" style="text-align: center">
+                    <h3>Year</h3>
+                    <select name="year" id="year" size = "1">
+                        <option value="2022">2022 </option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                    </select>
+                </div>
+            </div>
+            <input type = "submit" value"Submit" class="btn"/>
+
+        </form>
+        
+    </div>
+</body>
+</html>
