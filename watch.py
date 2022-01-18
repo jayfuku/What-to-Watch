@@ -3,15 +3,15 @@ import operator
 import os
 from boto.s3.connection import S3Connection
 
-
 CLIENT_ID = os.environ.get("CLIENT_ID")
 
+
 ops = {
-    'Before':operator.le,
-    'After':operator.ge,
+    'Before':operator.lt,
+    'After':operator.gt,
     'During':operator.eq,
-    '<':operator.le,
-    '>':operator.ge,
+    '<':operator.lt,
+    '>':operator.gt,
     '=':operator.eq
 }
 
@@ -21,7 +21,12 @@ def generate_link(anime:dict)->str:
 def generate_image(anime:dict)->str:
     return anime["node"]["main_picture"]["medium"]
 
-
+def verify_year(year:str)->bool:
+    # return True if valid year format, False otherwise
+    if not year.isdecimal():
+        return False
+    else:
+        return 1950 <= int(year) <= 2022
 
 def verify_account(username: str) -> int:
     # Verify if inputted account is valid
@@ -59,12 +64,12 @@ def get_suggestion(ptw: dict, time: str, genres = {}) -> dict:
     global ops
     time_check = False
     genre_check = False
-    if time != "Any":
+    if time[0] != "-" and time[0] != "No Preference":
         time_check = True
         time = time.split()
     if len(genres) > 0:
         genre_check = True
-
+    print(time[0])
     for anime in ptw:
         if not time_check and not genre_check:
             return anime
