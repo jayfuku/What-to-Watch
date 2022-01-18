@@ -18,7 +18,9 @@ Official myAnimeList API: https://myanimelist.net/apiconfig/references/api/v2
 
 Hosting by Heroku
 
-Python 3.9
+Python 3.9 and Flask Backend
+
+HTML/CSS Frontend
 
 # Usage
 
