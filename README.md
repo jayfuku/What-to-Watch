@@ -40,5 +40,7 @@ After hitting submit, you will be taken to a page showing the anime that is reco
 
 * Renaming/accompanying custom domain
 
+* Logo (Sorry Ice Climbers)
+
 
 
