@@ -26,6 +26,10 @@ Type in your MAL username and specify fields to refine your search.
 
 After hitting submit, you will be taken to a page showing the anime that is recommended based on your criteria.
 
+# Notes
+
+* The initial verison (1-17-2022) is very bare bones and kind of ugly. This is because this was a kind of proof of concept for me and I plan to improve on this as time goes on.
+
 # Upcoming
 
 * Improved UI and clarity (forgive me this is one of my first ventures in HTML and CSS)
@@ -35,3 +39,6 @@ After hitting submit, you will be taken to a page showing the anime that is reco
 * See the next best recommendation if you're not satisfied with the one shown
 
 * Renaming/accompanying custom domain
+
+
+
