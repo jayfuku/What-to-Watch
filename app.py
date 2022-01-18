@@ -3,6 +3,7 @@ from flask import Flask,render_template, request, flash
 
 from watch import *
 
+
 app = Flask(__name__)
 
 def find_anime(username, time_pref):
@@ -20,13 +21,17 @@ def submit():
         user = request.form['username']
         time = request.form['Time Preference']
         year = request.form['year']
-        print(time)
+
         if user == '':
             return render_template('index.html', message = "1")
         elif verify_account(user):
             return render_template('index.html', message = "2")
+        elif not verify_year(year):
+            return render_template('index.html', message = "4")
         else:
             result = find_anime(user,time+" "+str(year))
+            if result == {}:
+                return render_template('index.html', message = "3")
         return render_template('success.html', link=generate_link(result),image=generate_image(result), name = result['node']['title'])
 
 if __name__ == "__main__":
