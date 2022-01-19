@@ -1,6 +1,6 @@
 # What to Watch
 
-What to watch is a web app which allows you to get an anime recommendation based on your myAnimeList (MAL) plan-to-watch (PTW) list.
+What to watch is a web app which allows you to get an anime recommendation based on your myanimelist.net (MAL) plan-to-watch (PTW) list.
 
 The web app can be accessed at https://whattowatchimp.herokuapp.com/
 
